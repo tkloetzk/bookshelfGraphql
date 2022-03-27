@@ -2,6 +2,11 @@ schema {
 	query: Query
 }
 
+
+input BookQueryInput {
+  title: String
+}
+
 type Book {
   amazonAverageRating: Float
   amazonRatingsCount: Int
@@ -15,8 +20,12 @@ type Book {
   subtitle: String
   thumbnail: String
   unread: Boolean
+  categories: [String]
 }
 
 type Query {
 	getBookshelf: [Book]
+	getGenres: [String]
+	findByUnreadIsTrue: [Book]
+	findByUnreadIsFalse: [Book]
 }

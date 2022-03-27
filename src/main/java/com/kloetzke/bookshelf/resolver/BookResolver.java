@@ -41,4 +41,8 @@ public class BookResolver implements GraphQLQueryResolver {
 	public List<Book> findByUnreadIsFalse() {
 		return bookshelfRepository.findByUnreadIsFalse();
 	}
+
+  public Book getBookByIsbn(String bookIsbn) {
+        return bookshelfRepository.findByIsbn(bookIsbn);
+    }
 }

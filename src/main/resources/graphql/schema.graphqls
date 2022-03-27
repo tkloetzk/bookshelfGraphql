@@ -28,4 +28,5 @@ type Query {
 	getGenres: [String]
 	findByUnreadIsTrue: [Book]
 	findByUnreadIsFalse: [Book]
+	getBookByIsbn(isbn: String): Book
 }

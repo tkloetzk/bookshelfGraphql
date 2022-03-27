@@ -17,4 +17,6 @@ public interface BookshelfRepository extends MongoRepository<Book, ObjectId> {
 	
 	@Query("{ 'unread': false }")
 	List<Book> findByUnreadIsFalse();
+
+	Book findByIsbn(String bookIsbn);
 }

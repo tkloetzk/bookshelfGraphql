@@ -12,10 +12,10 @@ import com.kloetzke.bookshelf.repository.BookshelfRepository;
 @Service
 public class BookService implements GraphQLQueryResolver {
 
-	@Autowired
-	private BookshelfRepository bookshelf;
-	
-	public List<Book> getBookshelf() {
-		return bookshelf.findAll();
-	}
+//	@Autowired
+//	private BookshelfRepository bookshelf;
+//	
+//	public List<Book> getBookshelf() {
+//		return bookshelf.findAll();
+//	}
 }

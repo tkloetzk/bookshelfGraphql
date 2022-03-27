@@ -7,51 +7,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "BOOK")
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "bookshelf")
 public class Book {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
-	private Integer id;
+	private ObjectId id;
 
-	@Column(name = "amazonAverageRating")
 	private Double amazonAverageRating;
 
-	@Column(name = "amazonRatingsCount")
 	private Integer amazonRatingsCount;
 
 //	@Column(name = "categories")
 //	private String[] categories;
 
-	@Column(name = "description")
 	private String description;
 
-	@Column(name = "goodreadsAverageRating")
 	private Double goodreadsAverageRating;
 
-	@Column(name = "goodreadsRatingsCount")
 	private Integer goodreadsRatingsCount;
 
-	@Column(name = "isbn")
 	private String isbn;
 
-	@Column(name = "title")
 	private String title;
 
-	@Column(name = "owned")
 	private Boolean owned;
 
-	@Column(name = "price")
 	private String price;
 
-	@Column(name = "subtitle")
 	private String subtitle;
 
-	@Column(name = "thumbnail")
 	private String thumbnail;
 
-	@Column(name = "unread")
 	private Boolean unread;
 
 	public Book() {
@@ -83,11 +71,11 @@ public class Book {
 		this.unread = unread;
 	}
 
-	public Integer getId() {
+	public ObjectId getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(ObjectId id) {
 		this.id = id;
 	}
 

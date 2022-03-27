@@ -33,7 +33,7 @@ public class BookResolver implements GraphQLQueryResolver {
 		}
 		return categories;
 	}
-	
+
 	public List<Book> findByUnreadIsTrue() {
 		return bookshelfRepository.findByUnreadIsTrue();
 	}
@@ -42,7 +42,7 @@ public class BookResolver implements GraphQLQueryResolver {
 		return bookshelfRepository.findByUnreadIsFalse();
 	}
 
-  public Book getBookByIsbn(String bookIsbn) {
-        return bookshelfRepository.findByIsbn(bookIsbn);
-    }
+	public Book getBookByIsbn(String bookIsbn) {
+		return bookshelfRepository.findByIsbn(bookIsbn);
+	}
 }

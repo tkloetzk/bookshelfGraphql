@@ -1,0 +1,22 @@
+schema {
+	query: Query
+}
+
+type Book {
+  amazonAverageRating: Float
+  amazonRatingsCount: Int
+  description: String
+  goodreadsAverageRating: Float
+  goodreadsRatingsCount: Int
+  isbn: String
+  title: String
+  owned: Boolean
+  price: String
+  subtitle: String
+  thumbnail: String
+  unread: Boolean
+}
+
+type Query {
+	getBookshelf: [Book]
+}

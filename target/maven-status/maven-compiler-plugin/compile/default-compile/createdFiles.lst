@@ -1,0 +1,5 @@
+com/kloetzke/bookshelf/model/Book.class
+com/kloetzke/bookshelf/repository/BookshelfRepository.class
+com/kloetzke/bookshelf/service/BookService.class
+com/kloetzke/bookshelf/BookshelfGraphQlApplication.class
+com/kloetzke/bookshelf/repository/DataLoaderService.class

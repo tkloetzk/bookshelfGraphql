@@ -1,11 +1,8 @@
 package com.kloetzke.bookshelf.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import java.util.List;
+
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,8 +16,7 @@ public class Book {
 
 	private Integer amazonRatingsCount;
 
-//	@Column(name = "categories")
-//	private String[] categories;
+	private List<String> categories;
 
 	private String description;
 
@@ -45,7 +41,7 @@ public class Book {
 	public Book() {
 
 	}
-	
+
 	public Book(String isbn, String title) {
 		super();
 		this.isbn = isbn;
@@ -58,7 +54,7 @@ public class Book {
 		super();
 		this.amazonAverageRating = amazonAverageRating;
 		this.amazonRatingsCount = amazonRatingsCount;
-	//	this.categories = categories;
+		// this.categories = categories;
 		this.description = description;
 		this.goodreadsAverageRating = goodreadsAverageRating;
 		this.goodreadsRatingsCount = goodreadsRatingsCount;
@@ -95,13 +91,13 @@ public class Book {
 		this.amazonRatingsCount = amazonRatingsCount;
 	}
 
-//	public String[] getCategories() {
-//		return categories;
-//	}
-//
-//	public void setCategories(String[] categories) {
-//		this.categories = categories;
-//	}
+	public List<String> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<String> categories) {
+		this.categories = categories;
+	}
 
 	public String getDescription() {
 		return description;

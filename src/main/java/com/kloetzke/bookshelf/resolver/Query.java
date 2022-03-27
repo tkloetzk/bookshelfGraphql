@@ -11,18 +11,18 @@ import com.kloetzke.bookshelf.repository.BookshelfRepository;
 public class Query implements GraphQLQueryResolver {
 
 	private BookshelfRepository bookshelfRepository;
-	
+
 	@Autowired
 	public Query(BookshelfRepository bookshelfRepository) {
 		this.bookshelfRepository = bookshelfRepository;
 	}
-	
+
 	public Iterable<Book> getBookshelf() {
 		return bookshelfRepository.findAll();
 	}
-	
+
 //	public Book getBookByISBN(String isbn) {
 //		
 //	}
-	
+
 }
